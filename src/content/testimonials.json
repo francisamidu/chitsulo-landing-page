@@ -1,0 +1,30 @@
+[
+  {
+    "id": "t1",
+    "name": "James Mwale",
+    "role": "Property Owner",
+    "text": "Chitsulo Fabricators installed a custom gate on my home and the quality is exceptional. Professional, reliable, and affordable. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "id": "t2",
+    "name": "Sarah Banda",
+    "role": "Business Manager",
+    "text": "We commissioned them for window security bars on our retail shop. Their craftsmanship and attention to detail exceeded our expectations. Great customer service too.",
+    "rating": 5
+  },
+  {
+    "id": "t3",
+    "name": "Robert Ncube",
+    "role": "Restaurant Owner",
+    "text": "Had emergency repairs needed on our kitchen equipment. Chitsulo responded quickly and fixed it perfectly. They understand our business needs.",
+    "rating": 5
+  },
+  {
+    "id": "t4",
+    "name": "Grace Chiwewe",
+    "role": "Homeowner",
+    "text": "Custom steel furniture we ordered arrived beautifully finished and incredibly sturdy. The team was responsive and professional throughout the project.",
+    "rating": 5
+  }
+]
