@@ -35,7 +35,7 @@ export default function Navbar() {
     border-b border-gray-100
     ${
       isScrolled
-        ? "bg-red-600/95 border-red-600 backdrop-blur-sm shadow-md pt-4"
+        ? "bg-red-600/95 border-red-600 backdrop-blur-sm shadow-md md:pt-0 pt-4"
         : "bg-transparent border-gray-500/30 shadow-none"
     }`}
     >
