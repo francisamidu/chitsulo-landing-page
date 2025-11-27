@@ -6,6 +6,7 @@ import QuoteForm from "@/components/sections/quote-form";
 import History from "@/components/sections/history";
 import { getProjects, getTestimonials } from "@/lib/data";
 import { createFileRoute } from "@tanstack/react-router";
+import "./index.css";
 
 export const Route = createFileRoute("/")({
   component: Home,
