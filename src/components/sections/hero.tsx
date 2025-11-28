@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import {
   IconArrowBigRightFilled as IconArrow,
-  IconPlayerPlayFilled as IconPlay,
   IconChevronLeft as ChevronLeft,
   IconChevronRight as ChevronRight,
+  IconPlayerPlayFilled as IconPlay,
 } from "@tabler/icons-react";
-import { Link } from "@tanstack/react-router";
 
 export default function Hero() {
   const features = [
@@ -74,9 +73,9 @@ export default function Hero() {
             >
               <IconArrow className="w-5 h-5 mr-2" /> Our Services
             </Button>
-            <Link
+            <a
               className="flex flex-row items-center justify-center text-white gap-3"
-              to="#how-it-works"
+              href="#how-it-works"
             >
               <Button
                 className="rounded-full bg-white p-3 hover:bg-white"
@@ -85,7 +84,7 @@ export default function Hero() {
                 <IconPlay className="text-black w-5 h-5" />
               </Button>
               <span className="font-semibold">How it works</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

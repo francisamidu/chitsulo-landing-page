@@ -1,10 +1,8 @@
-"use client";
-
+import { Button } from "@/components/ui/button";
 import {
   IconChevronRight,
   IconCircleCheckFilled as IconCircleCheck,
 } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
 
 export default function About() {
   return (

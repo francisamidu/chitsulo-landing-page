@@ -1,11 +1,10 @@
-"use client";
-
 import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   IconMail as Mail,
-  IconPhone as Phone,
   IconMessage as MessageCircle,
+  IconPhone as Phone,
 } from "@tabler/icons-react";
 
 export default function QuoteForm() {

@@ -1,13 +1,12 @@
-"use client";
-
 import { useState } from "react";
+
+import { Testimonial } from "@/lib/data";
 import {
   IconChevronLeft as ChevronLeft,
   IconChevronRight as ChevronRight,
-  IconUsers as Users,
   IconCircleCheck as CheckCircle2,
+  IconUsers as Users,
 } from "@tabler/icons-react";
-import { Testimonial } from "@/lib/data";
 
 export default function Testimonials({
   testimonials,

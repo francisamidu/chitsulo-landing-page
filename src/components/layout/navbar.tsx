@@ -1,14 +1,13 @@
-"use client";
+import { useEffect, useState } from "react";
 
-import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import {
   IconMenu as Menu,
-  IconX as X,
   IconSettingsFilled as IconSettings,
+  IconX as X,
 } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-const links = [
+
+const as = [
   { name: "Services", href: "#services" },
   { name: "Gallery", href: "#gallery" },
   { name: "Testimonials", href: "#testimonials" },
@@ -42,25 +41,25 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 font-bold text-xl">
+          <a href="/" className="flex items-center gap-2 font-bold text-xl">
             <IconSettings className="w-6 h-6 text-white" />
             <span className={isScrolled ? "text-white" : "text-primary"}>
               CHITSULO
             </span>
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
+            {as.map((a) => (
+              <a
+                key={a.name}
+                href={a.href}
                 className={`font-semibold text-white transition 
               ${isScrolled ? "hover:text-gray-200" : "hover:text-primary"}
             `}
               >
-                {link.name}
-              </Link>
+                {a.name}
+              </a>
             ))}
           </div>
 
@@ -81,18 +80,18 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-3">
-            <Link to="#services" className="block py-2 hover:text-primary">
+            <a href="#services" className="block py-2 hover:text-primary">
               Services
-            </Link>
-            <Link to="#gallery" className="block py-2 hover:text-primary">
+            </a>
+            <a href="#gallery" className="block py-2 hover:text-primary">
               Gallery
-            </Link>
-            <Link to="#testimonials" className="block py-2 hover:text-primary">
+            </a>
+            <a href="#testimonials" className="block py-2 hover:text-primary">
               Testimonials
-            </Link>
-            <Link to="#contact" className="block py-2 hover:text-primary">
+            </a>
+            <a href="#contact" className="block py-2 hover:text-primary">
               Contact
-            </Link>
+            </a>
             <Button className="w-full bg-primary hover:bg-red-700">
               Request Quote
             </Button>
