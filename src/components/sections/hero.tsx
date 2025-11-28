@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   IconArrowBigRightFilled as IconArrow,
@@ -31,15 +33,18 @@ export default function Hero() {
     },
   ];
 
+  const images = ["/welding-1.webp", "/welding-2.webp", "/welding-3.webp"];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   return (
     <section className="relative w-full">
       {/* Hero Section */}
       <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 transition-all duration-500"
           style={{
-            backgroundImage: "url('/welding-1.webp')",
+            backgroundImage: `url('${images[currentImageIndex]}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -47,10 +52,22 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
-        <button className="absolute left-4 z-20 text-white hover:text-gray-300 hidden sm:block">
+        <button
+          className="absolute left-4 z-20 text-white hover:text-gray-300 hidden sm:block"
+          onClick={() =>
+            setCurrentImageIndex(
+              (currentImageIndex - 1 + images.length) % images.length
+            )
+          }
+        >
           <ChevronLeft className="w-8 h-8" />
         </button>
-        <button className="absolute right-4 z-20 text-white hover:text-gray-300 hidden sm:block">
+        <button
+          className="absolute right-4 z-20 text-white hover:text-gray-300 hidden sm:block"
+          onClick={() =>
+            setCurrentImageIndex((currentImageIndex + 1) % images.length)
+          }
+        >
           <ChevronRight className="w-8 h-8" />
         </button>
 
